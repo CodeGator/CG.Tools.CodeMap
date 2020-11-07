@@ -1,0 +1,130 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UserSecretsId>a3095f1a-7b70-4d86-aa36-37e7d03883cb</UserSecretsId>
+    <Authors>Martin Cook</Authors>
+    <Company>CodeGator</Company>
+    <Description>This application is a tool for generating code maps from a .NET assembly.</Description>
+    <Copyright>Copyright © 2019 - 2020 by CodeGator. All rights reserved.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/CodeGator/CG.Tools.CodeMap</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/CodeGator/CG.Tools.PackageTree</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>nuget, dependency graph, code map, references, CG.Tools.CodeMap, CodeGator</PackageTags>
+    <ApplicationIcon>Images\App.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp3.1\CG.Tools.CodeMap.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\App.ico" />
+    <None Remove="Images\fileClose-24.png" />
+    <None Remove="Images\fileClose-32.png" />
+    <None Remove="Images\fileClose-48.png" />
+    <None Remove="Images\fileExit-24.png" />
+    <None Remove="Images\fileExit-32.png" />
+    <None Remove="Images\fileExit-48.png" />
+    <None Remove="Images\fileOpen-24.png" />
+    <None Remove="Images\fileOpen-32.png" />
+    <None Remove="Images\fileOpen-48.png" />
+    <None Remove="Images\Gear.ico" />
+    <None Remove="Images\Gear.png" />
+    <None Remove="Images\help-24.png" />
+    <None Remove="Images\help-32.png" />
+    <None Remove="Images\help-48.png" />
+    <None Remove="Images\layout-24.png" />
+    <None Remove="Images\layout-32.png" />
+    <None Remove="Images\layout-48.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\map-24.png" />
+    <None Remove="Images\map-256.png" />
+    <None Remove="Images\map-32.png" />
+    <None Remove="Images\map-48.png" />
+    <None Remove="Images\Node.bmp" />
+    <None Remove="Images\print-24.png" />
+    <None Remove="Images\print-32.png" />
+    <None Remove="Images\print-48.png" />
+    <None Remove="Images\Splash.png" />
+    <None Remove="Images\zoomIn-24.png" />
+    <None Remove="Images\zoomIn-32.png" />
+    <None Remove="Images\zoomIn-48.png" />
+    <None Remove="Images\zoomOut-24.png" />
+    <None Remove="Images\zoomOut-32.png" />
+    <None Remove="Images\zoomOut-48.png" />
+    <None Remove="Images\zoomRestore-24.png" />
+    <None Remove="Images\zoomRestore-32.png" />
+    <None Remove="Images\zoomRestore-48.png" />
+    <None Remove="Images\zoomTo-24.png" />
+    <None Remove="Images\zoomTo-32.png" />
+    <None Remove="Images\zoomTo-48.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CG.Core" Version="2020.6.37" />
+    <PackageReference Include="CG.Hosting" Version="2020.5.12" />
+    <PackageReference Include="CG.Sms.Twilio" Version="2020.2.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.9" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.3.37">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="18.3.0.47" />
+    <PackageReference Include="Syncfusion.SfDiagram.WPF" Version="18.3.0.47" />
+    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="18.3.0.47" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="18.3.0.47" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="18.3.0.47" />
+    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="18.3.0.47" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\App.ico" />
+    <Resource Include="Images\fileClose-24.png" />
+    <Resource Include="Images\fileClose-32.png" />
+    <Resource Include="Images\fileClose-48.png" />
+    <Resource Include="Images\fileExit-24.png" />
+    <Resource Include="Images\fileExit-32.png" />
+    <Resource Include="Images\fileExit-48.png" />
+    <Resource Include="Images\fileOpen-24.png" />
+    <Resource Include="Images\fileOpen-32.png" />
+    <Resource Include="Images\fileOpen-48.png" />
+    <Resource Include="Images\help-24.png" />
+    <Resource Include="Images\help-32.png" />
+    <Resource Include="Images\help-48.png" />
+    <Resource Include="Images\layout-24.png" />
+    <Resource Include="Images\layout-32.png" />
+    <Resource Include="Images\layout-48.png" />
+    <Resource Include="Images\map-24.png" />
+    <Resource Include="Images\map-256.png" />
+    <Resource Include="Images\map-32.png" />
+    <Resource Include="Images\map-48.png" />
+    <Resource Include="Images\print-24.png" />
+    <Resource Include="Images\print-32.png" />
+    <Resource Include="Images\print-48.png" />
+    <Resource Include="Images\Splash.png" />
+    <Resource Include="Images\zoomIn-24.png" />
+    <Resource Include="Images\zoomIn-32.png" />
+    <Resource Include="Images\zoomIn-48.png" />
+    <Resource Include="Images\zoomOut-24.png" />
+    <Resource Include="Images\zoomOut-32.png" />
+    <Resource Include="Images\zoomOut-48.png" />
+    <Resource Include="Images\zoomRestore-24.png" />
+    <Resource Include="Images\zoomRestore-32.png" />
+    <Resource Include="Images\zoomRestore-48.png" />
+    <Resource Include="Images\zoomTo-24.png" />
+    <Resource Include="Images\zoomTo-32.png" />
+    <Resource Include="Images\zoomTo-48.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

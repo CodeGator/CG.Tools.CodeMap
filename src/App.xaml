@@ -1,0 +1,26 @@
+﻿<Application x:Class="CG.Tools.CodeMap.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CG.Tools.CodeMap"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"  
+             xmlns:inf="clr-namespace:CG.Tools.CodeMap.Infrastructure"
+             StartupUri="Views/MainWindow.xaml">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Path" x:Key="ShapeStyle1">
+                <Setter Property="Fill" Value="RoyalBlue"/>
+                <Setter Property="Stretch" Value="Fill"/>
+                <Setter Property="Stroke" Value="Black"/>
+            </Style>
+            <Style TargetType="Path" x:Key="ShapeStyle2">
+                <Setter Property="Fill" Value="#FF5B9BD5"/>
+                <Setter Property="Stretch" Value="Fill"/>
+                <Setter Property="Stroke" Value="Black"/>
+            </Style>
+            <inf:InverseBooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter"/>
+            <inf:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        </ResourceDictionary>        
+    </Application.Resources>
+    
+</Application>
