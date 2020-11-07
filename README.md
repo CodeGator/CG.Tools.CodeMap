@@ -42,7 +42,7 @@ Opening .NET assemblies is easy using the file|open menu command, or using the f
 
 ![File Open](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/open.jpg)
 
-Filtering unwanted assemblies out is also easy, using the filter drop down:
+Filtering out unwanted assemblies is also easy, using the filter drop down:
 
 ![File Open](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/filters.jpg)
 
