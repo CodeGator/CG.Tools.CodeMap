@@ -30,7 +30,9 @@ If you don't add your Syncfusion key to the appSetting.json, as shown above, you
 
 ![The main UI](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/syncfusion.jpg)
 
-Just press Close. The popup just means the Syncfusion library didn't find a license. The CodeMap tool will work without the Syncfusion license.
+Just press Close. The popup means the Syncfusion library didn't find a license, so it's starting in 'trial mode'. 
+
+It's alright, the CodeMap tool will work without the Syncfusion license.
 
 
 ##### UI walk through:
