@@ -64,6 +64,7 @@
                 </MenuItem>
                 <Separator />
                 <MenuItem x:Name="filePrintMenu"
+                          IsEnabled="False"
                           Command="{Binding FilePrintCommand}"
                           CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
                     <MenuItem.Header>
@@ -273,6 +274,7 @@
             <Separator />
             <Button x:Name="filePrintButton"
                     ToolTip="Print Diagram"
+                    IsEnabled="False"
                     Command="{Binding FilePrintCommand}"
                     CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
                 <Image x:Name="filePrintButtonImage" 

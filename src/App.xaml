@@ -9,12 +9,12 @@
     <Application.Resources>
         <ResourceDictionary>
             <Style TargetType="Path" x:Key="ShapeStyle1">
-                <Setter Property="Fill" Value="RoyalBlue"/>
+                <Setter Property="Fill" Value="#FF131DEC"/>
                 <Setter Property="Stretch" Value="Fill"/>
                 <Setter Property="Stroke" Value="Black"/>
             </Style>
             <Style TargetType="Path" x:Key="ShapeStyle2">
-                <Setter Property="Fill" Value="#FF5B9BD5"/>
+                <Setter Property="Fill" Value="#FF37579B"/>
                 <Setter Property="Stretch" Value="Fill"/>
                 <Setter Property="Stroke" Value="Black"/>
             </Style>

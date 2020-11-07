@@ -721,16 +721,17 @@ namespace CG.Tools.CodeMap.ViewModels
                                 : App.Current.Resources["ShapeStyle2"] as Style,
                             OffsetX = -200,
                             OffsetY = -200,
-                            UnitHeight = 50,
-                            UnitWidth = asmName.Length * 7,
+                            UnitHeight = (Nodes as NodeCollection).Count == 0 ? 75 : 50,
+                            UnitWidth = (Nodes as NodeCollection).Count == 0 ? asmName.Length * 10 : asmName.Length * 7,
                             Annotations = new ObservableCollection<IAnnotation>()
                             {
                                 new AnnotationEditorViewModel()
                                 {
                                     Content = $"{asmName}"
                                 }
-                            }
-                        }); ; 
+                            },
+                            Constraints = NodeConstraints.Default & ~(NodeConstraints.Rotatable | NodeConstraints.InheritRotatable)
+                        });  
                 }));
         }
 
