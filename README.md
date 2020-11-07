@@ -26,26 +26,33 @@ If you do get your own Syncfusion license, you'll need to add your license key t
 }
 ```
 
+If you don't add your Syncfusion key to the appSetting.json, as shown above, you'll see a popup like this at runtime:
+
+![The main UI](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/syncfusion.jpg)
+
+Just press OK. The popup just means the Syncfusion library didn't find a license. The CodeMap tool will work without the Syncfusion license.
+
+
 ##### UI walk through:
 Here is the overal UI:
 
-![The main UI](.\images\mainUI.jpg)
+![The main UI](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/mainUI.jpg)
 
 Opening .NET assemblies is easy using the file|open menu command, or using the file option toolbar:
 
-![File Open](.\images\open.jpg)
+![File Open](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/open.jpg)
 
 Filtering unwanted assemblies out is also easy, using the filter drop down:
 
-![File Open](.\images\filters.jpg)
+![File Open](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/filters.jpg)
 
 Zooming the diagram up or down is easy, using the zoom controls:
 
-![File Open](.\images\zoom.jpg)
+![File Open](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/zoom.jpg)
 
 Finally, you can layout a diagram at any time using the layout control:
 
-![File Open](.\images\layout.jpg)
+![File Open](https://github.com/CodeGator/CG.Tools.CodeMap/blob/main/images/layout.jpg)
 
 
 #### How do I contact you?
