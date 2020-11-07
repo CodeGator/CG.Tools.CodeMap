@@ -284,7 +284,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to exit the application.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteFileExitCommand(object args)
+        protected virtual void ExecuteFileExitCommand(object args)
         {
             // Shutdown the app.
             App.Current.Shutdown();
@@ -298,7 +298,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteFileExitCommand(object args)
+        protected virtual bool CanExecuteFileExitCommand(object args)
         {
             return true;
         }
@@ -309,7 +309,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to open a file.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteFileOpenCommand(object args)
+        protected virtual void ExecuteFileOpenCommand(object args)
         {
             // The arg is actually the view.
             var owner = args as Window;
@@ -343,7 +343,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteFileOpenCommand(object args)
+        protected virtual bool CanExecuteFileOpenCommand(object args)
         {
             return true;
         }
@@ -354,7 +354,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to close a file.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteFileCloseCommand(object args)
+        protected virtual void ExecuteFileCloseCommand(object args)
         {
             // The arg is actually the view.
             var owner = args as Window;
@@ -374,7 +374,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteFileCloseCommand(object args)
+        protected virtual bool CanExecuteFileCloseCommand(object args)
         {
             return true;
         }
@@ -385,7 +385,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to print the file.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteFilePrintCommand(object args)
+        protected virtual void ExecuteFilePrintCommand(object args)
         {
             // TODO : figure this out.
         }
@@ -398,7 +398,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteFilePrintCommand(object args)
+        protected virtual bool CanExecuteFilePrintCommand(object args)
         {
             return true;
         }
@@ -409,7 +409,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to show the about box.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteHelpAboutCommand(object args)
+        protected virtual void ExecuteHelpAboutCommand(object args)
         {
             // The arg is actually the view.
             var owner = args as Window;
@@ -434,7 +434,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteHelpAboutCommand(object args)
+        protected virtual bool CanExecuteHelpAboutCommand(object args)
         {
             return true;
         }
@@ -445,7 +445,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to layout the diagram.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteDiagramLayoutCommand(object args)
+        protected virtual void ExecuteDiagramLayoutCommand(object args)
         {
             // The arg is actually the view.
             var owner = args as Window;
@@ -469,7 +469,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteDiagramLayoutCommand(object args)
+        protected virtual bool CanExecuteDiagramLayoutCommand(object args)
         {
             return true; 
         }
@@ -480,7 +480,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to zoom the diagram restore.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteDiagramZoomRestoreCommand(object args)
+        protected virtual void ExecuteDiagramZoomRestoreCommand(object args)
         {
             (Info as IGraphInfo).Commands.Reset.Execute(new ResetParameter() { Reset = Reset.ZoomPan });
         }
@@ -493,7 +493,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteDiagramZoomRestoreCommand(object args)
+        protected virtual bool CanExecuteDiagramZoomRestoreCommand(object args)
         {
             return true;
         }
@@ -504,7 +504,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to zoom the diagram in.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteDiagramZoomInCommand(object args)
+        protected virtual void ExecuteDiagramZoomInCommand(object args)
         {
             (Info as IGraphInfo).Commands.Zoom.Execute(new ZoomPositionParameter() { ZoomCommand = ZoomCommand.ZoomIn, ZoomFactor = 0.2 });
         }
@@ -517,7 +517,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteDiagramZoomInCommand(object args)
+        protected virtual bool CanExecuteDiagramZoomInCommand(object args)
         {
             return true;
         }
@@ -528,7 +528,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to zoom the diagram out.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteDiagramZoomOutCommand(object args)
+        protected virtual void ExecuteDiagramZoomOutCommand(object args)
         {
             (Info as IGraphInfo).Commands.Zoom.Execute(new ZoomPositionParameter() { ZoomCommand = ZoomCommand.ZoomOut, ZoomFactor = 0.2 });
         }
@@ -541,7 +541,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteDiagramZoomOutCommand(object args)
+        protected virtual bool CanExecuteDiagramZoomOutCommand(object args)
         {
             return true;
         }
@@ -552,7 +552,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// This method is called to zoom the diagram to page.
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
-        void ExecuteDiagramZoomToPageCommand(object args)
+        protected virtual void ExecuteDiagramZoomToPageCommand(object args)
         {
             (Info as IGraphInfo).Commands.FitToPage.Execute(null);
         }
@@ -565,7 +565,7 @@ namespace CG.Tools.CodeMap.ViewModels
         /// </summary>
         /// <param name="args">The arguments for the operation.</param>
         /// <returns>True if the method should be called; false otherwise.</returns>
-        bool CanExecuteDiagramZoomToPageCommand(object args)
+        protected virtual bool CanExecuteDiagramZoomToPageCommand(object args)
         {
             return true;
         }
