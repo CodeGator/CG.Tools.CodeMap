@@ -13,6 +13,174 @@
       "is_incremental": false
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.App.html",
+          "hash": "WkyUsLGviejwHIJYN3ELdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Infrastructure.BooleanToVisibilityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Infrastructure.BooleanToVisibilityConverter.html",
+          "hash": "hXR96grSog4OMpRQ95Gjzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Infrastructure.ICloseWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Infrastructure.ICloseWindow.html",
+          "hash": "mlbn6bN5DdXa6ZainyHD4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Infrastructure.IUpdateDiagram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Infrastructure.IUpdateDiagram.html",
+          "hash": "3jlhDeC1hXxdDPyImmXNbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Infrastructure.InverseBooleanToVisibilityConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Infrastructure.InverseBooleanToVisibilityConverter.html",
+          "hash": "9rSmZ3puXMSVnoPbEmXMpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Infrastructure.html",
+          "hash": "anfvKzxLLrRxU+EANXgcLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Package.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Package.html",
+          "hash": "qQNAgCXNzXPCnHk30YvpLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.ViewModels.FilterViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.ViewModels.FilterViewModel.html",
+          "hash": "5+9iqZrZfVxkrznjDO8T7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.ViewModels.MainWindowViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.ViewModels.MainWindowViewModel.html",
+          "hash": "xvZ9ZXwpQEnx3GJ14/N2Tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.ViewModels.ViewModelBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.ViewModels.ViewModelBase.html",
+          "hash": "QjO63a+SrrR3+mT43TSW6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.ViewModels.html",
+          "hash": "NtkzHH7+M287diy6IEk2Ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Views.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Views.MainWindow.html",
+          "hash": "KJN+W2bKiMVOvWSGKW9z2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.Views.html",
+          "hash": "viW9jWLsFyDJQ4M7QMgvuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.html",
+          "hash": "qXgbN70VFZhGZ5cDHVGktQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -30,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "H5frWk4fYGIWHpFNp3BdfA=="
+          "hash": "BDB81csL65IwXgsXvOZ44A=="
         }
       },
       "is_incremental": false,
@@ -122,7 +290,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "uv2qBfBIKTDzQ2sCi6zWyw=="
+          "hash": "eq5510NkN0kEWQVNka4Kpw=="
         }
       },
       "is_incremental": false,
@@ -144,6 +312,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 14,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
