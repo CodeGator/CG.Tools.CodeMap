@@ -1,9 +1,4 @@
-﻿using CG.Hosting;
-using CG.Tools.CodeMap.Options;
-using CG.Validations;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Windows;
 
@@ -14,19 +9,6 @@ namespace CG.Tools.CodeMap
     /// </summary>
     public partial class App : Application
     {
-        // *******************************************************************
-        // Properties.
-        // *******************************************************************
-
-        #region Properties
-
-        /// <summary>
-        /// This property contains a host for the application.
-        /// </summary>
-        public IHost Host { get; protected set; }
-
-        #endregion
-
         // *******************************************************************
         // Protected methods.
         // *******************************************************************
@@ -41,12 +23,11 @@ namespace CG.Tools.CodeMap
             StartupEventArgs e
             )
         {
-            // Create and configure a 'standard' host.
-            Host = StandardHost.CreateStandardBuilder<App, AppOptions>()
-                .Build();
-
-            // Get the configuration.
-            var configuration = Host.Services.GetRequiredService<IConfiguration>();
+            // Open the appsettings.
+            var builder = new ConfigurationBuilder();
+            builder.AddJsonFile("appSettings.json");
+            builder.AddUserSecrets<App>();
+            var configuration = builder.Build();
 
             // Set the syncfusion license key.
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(
