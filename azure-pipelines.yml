@@ -6,7 +6,7 @@ pool:
 
 variables:
   BuildConfiguration: 'Release'
-  SolutionName: CG.Tools.CodeeMap
+  SolutionName: CG.Tools.CodeMap
   SolutionPath: 'src/$(SolutionName)'
 
 steps:
@@ -74,5 +74,6 @@ steps:
     git add -A
     git commit -m "CI Updates [skip ci]" -q
     git push origin gh-pages -q
-  displayName: "Publish docs"  
-
+  displayName: "Publish docs"
+  
+  
