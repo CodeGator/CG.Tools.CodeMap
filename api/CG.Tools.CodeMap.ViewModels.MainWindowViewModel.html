@@ -1195,6 +1195,50 @@ method.</p>
       </tr>
     </tbody>
   </table>
+  <a id="CG_Tools_CodeMap_ViewModels_MainWindowViewModel_CanExecuteItemDeletingCommand_" data-uid="CG.Tools.CodeMap.ViewModels.MainWindowViewModel.CanExecuteItemDeletingCommand*"></a>
+  <h4 id="CG_Tools_CodeMap_ViewModels_MainWindowViewModel_CanExecuteItemDeletingCommand_System_Object_" data-uid="CG.Tools.CodeMap.ViewModels.MainWindowViewModel.CanExecuteItemDeletingCommand(System.Object)">CanExecuteItemDeletingCommand(Object)</h4>
+  <div class="markdown level1 summary"><p>This method indicates whether it should be possible to call the <a class="xref" href="CG.Tools.CodeMap.ViewModels.MainWindowViewModel.html#CG_Tools_CodeMap_ViewModels_MainWindowViewModel_ExecuteItemDeletingCommand_System_Object_">ExecuteItemDeletingCommand(Object)</a>
+method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CanExecuteItemDeletingCommand(object args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the method should be called; false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <a id="CG_Tools_CodeMap_ViewModels_MainWindowViewModel_DiagramDotNetFile_" data-uid="CG.Tools.CodeMap.ViewModels.MainWindowViewModel.DiagramDotNetFile*"></a>
   <h4 id="CG_Tools_CodeMap_ViewModels_MainWindowViewModel_DiagramDotNetFile_System_Windows_Window_" data-uid="CG.Tools.CodeMap.ViewModels.MainWindowViewModel.DiagramDotNetFile(System.Windows.Window)">DiagramDotNetFile(Window)</h4>
   <div class="markdown level1 summary"><p>This method creates a dependency diagram for the currently opened .NET assembly.</p>
@@ -1473,6 +1517,34 @@ method.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void ExecuteHelpAboutCommand(object args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Tools_CodeMap_ViewModels_MainWindowViewModel_ExecuteItemDeletingCommand_" data-uid="CG.Tools.CodeMap.ViewModels.MainWindowViewModel.ExecuteItemDeletingCommand*"></a>
+  <h4 id="CG_Tools_CodeMap_ViewModels_MainWindowViewModel_ExecuteItemDeletingCommand_System_Object_" data-uid="CG.Tools.CodeMap.ViewModels.MainWindowViewModel.ExecuteItemDeletingCommand(System.Object)">ExecuteItemDeletingCommand(Object)</h4>
+  <div class="markdown level1 summary"><p>This method is called when an item is in the process of being removed
+from the diagram.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ExecuteItemDeletingCommand(object args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

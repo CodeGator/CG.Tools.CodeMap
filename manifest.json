@@ -26,6 +26,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Tools.CodeMap.AssemblyLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Tools.CodeMap.AssemblyLoader.html",
+          "hash": "d5LlI88Xh9WLCmiDU1gX2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Tools.CodeMap.Infrastructure.BooleanToVisibilityConverter.yml",
       "output": {
         ".html": {
@@ -114,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Tools.CodeMap.ViewModels.MainWindowViewModel.html",
-          "hash": "d24sjbP2NJkICtoe6U2rgg=="
+          "hash": "FNAzOXVnj7ZUBm6UyOC8tA=="
         }
       },
       "is_incremental": false,
@@ -174,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Tools.CodeMap.html",
-          "hash": "4ABIlnn8u90jF/vK60nX/w=="
+          "hash": "gUcvMAUZeg4N3RVvvsie+Q=="
         }
       },
       "is_incremental": false,
@@ -198,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "BDB81csL65IwXgsXvOZ44A=="
+          "hash": "vHBROgwoXToMNJj8Hv4aZw=="
         }
       },
       "is_incremental": false,
@@ -317,7 +329,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 14,
+          "total_file_count": 15,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
