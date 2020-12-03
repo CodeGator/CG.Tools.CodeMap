@@ -46,6 +46,8 @@ namespace CG.Tools.CodeMap.ViewModels
         private DelegateCommand _diagramZoomOutCommand;
         private DelegateCommand _diagramZoomToPageCommand;
 
+        private DelegateCommand _itemDeletingCommand;
+
         #endregion
 
         // *******************************************************************
@@ -322,8 +324,7 @@ namespace CG.Tools.CodeMap.ViewModels
             openFileDialog.DefaultExt = ".dll";
             openFileDialog.Title = "Select a .NET assembly";
             openFileDialog.CheckPathExists = true;
-            openFileDialog.InitialDirectory = Environment.CurrentDirectory;
-
+            
             // Prompt the user.
             if (openFileDialog.ShowDialog(owner) == true)
             {
@@ -482,7 +483,9 @@ namespace CG.Tools.CodeMap.ViewModels
         /// <param name="args">The arguments for the operation.</param>
         protected virtual void ExecuteDiagramZoomRestoreCommand(object args)
         {
-            (Info as IGraphInfo).Commands.Reset.Execute(new ResetParameter() { Reset = Reset.ZoomPan });
+            (Info as IGraphInfo).Commands.Reset.Execute(
+                new ResetParameter() { Reset = Reset.ZoomPan }
+                );
         }
 
         // *******************************************************************
@@ -506,7 +509,9 @@ namespace CG.Tools.CodeMap.ViewModels
         /// <param name="args">The arguments for the operation.</param>
         protected virtual void ExecuteDiagramZoomInCommand(object args)
         {
-            (Info as IGraphInfo).Commands.Zoom.Execute(new ZoomPositionParameter() { ZoomCommand = ZoomCommand.ZoomIn, ZoomFactor = 0.2 });
+            (Info as IGraphInfo).Commands.Zoom.Execute(
+                new ZoomPositionParameter() { ZoomCommand = ZoomCommand.ZoomIn, ZoomFactor = 0.2 }
+                );
         }
 
         // *******************************************************************
@@ -569,7 +574,50 @@ namespace CG.Tools.CodeMap.ViewModels
         {
             return true;
         }
-                
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method is called when an item is in the process of being removed
+        /// from the diagram.
+        /// </summary>
+        /// <param name="args">The arguments for the operation.</param>
+        protected virtual void ExecuteItemDeletingCommand(object args)
+        {
+            var e = args as ItemDeletingEventArgs;
+            if (null != e)
+            {
+                var nodeViewModel = e.Item as NodeViewModel;
+
+                // Prompt the user first.
+                e.Cancel = MessageBox.Show(
+                        $"This will delete the '{nodeViewModel.ID}' node and ALL it's children. " +
+                        Environment.NewLine + Environment.NewLine +
+                        $"This action is not undoable! " + 
+                        Environment.NewLine + Environment.NewLine +
+                        "Are you SURE you want to do this?",
+                        Caption,
+                        MessageBoxButton.YesNo
+                    ) != MessageBoxResult.Yes;
+
+                // Delete any children.
+                e.DeleteSuccessors = true;
+            }            
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method indicates whether it should be possible to call the <see cref="ExecuteItemDeletingCommand(object)"/>
+        /// method.
+        /// </summary>
+        /// <param name="args">The arguments for the operation.</param>
+        /// <returns>True if the method should be called; false otherwise.</returns>
+        protected virtual bool CanExecuteItemDeletingCommand(object args)
+        {
+            return true;
+        }
+
         #endregion
 
         // *******************************************************************
@@ -780,6 +828,11 @@ namespace CG.Tools.CodeMap.ViewModels
             };
 
             Constraints = GraphConstraints.Default & ~GraphConstraints.ContextMenu;
+
+            ItemDeletingCommand = _itemDeletingCommand ?? (_itemDeletingCommand = new DelegateCommand(
+                ExecuteItemDeletingCommand,
+                CanExecuteItemDeletingCommand
+                ));
         }
 
         #endregion

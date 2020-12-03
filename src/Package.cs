@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Loader;
 
 namespace CG.Tools.CodeMap
 {
@@ -35,6 +36,13 @@ namespace CG.Tools.CodeMap
         {
             var table = new Dictionary<string, IList<string>>();
 
+            // Create a loading context.
+            var loader = new AssemblyLoader(
+                Path.GetDirectoryName(filePath),
+                "CG.Tools.CodeMap", 
+                false
+                );
+
             // Should we supply default filters?
             if (filters == null)
             {
@@ -49,14 +57,16 @@ namespace CG.Tools.CodeMap
             try
             {
                 // Load the assembly.
-                var assembly = Assembly.LoadFrom(
+                var assembly = loader.LoadFromAssemblyPath(
                     filePath
                     );
 
                 statusAction($"Parsing: '{Path.GetFileName(filePath)}'");
                 GetReferencedAssemblies(
                     assembly,
+                    loader,
                     filters,
+                    statusAction,
                     ref table
                     );
             }
@@ -126,11 +136,15 @@ namespace CG.Tools.CodeMap
         /// This method recursively parses out the references for a .NET assembly.
         /// </summary>
         /// <param name="asm">The assembly to us for the operation.</param>
+        /// <param name="loader">The loader to use for the operation.</param>
         /// <param name="filters">The filter to use for the operation.</param>
+        /// <param name="statusAction">A status delegate.</param>
         /// <param name="table">A dictionary of references.</param>
         private static void GetReferencedAssemblies(
             this Assembly asm,
+            AssemblyLoader loader,
             string[] filters,
+            Action<string> statusAction,
             ref Dictionary<string, IList<string>> table
             )
         {
@@ -163,20 +177,23 @@ namespace CG.Tools.CodeMap
                 try
                 {
                     // Load the assembly.
-                    var asmTemp = Assembly.Load(
+                    var asmTemp = loader.LoadFromAssemblyName(
                         reference
                         );
 
                     // Pase the references for the assembly.
                     GetReferencedAssemblies(
                         asmTemp,
+                        loader,
                         filters,
+                        statusAction,
                         ref table
                         );
                 }
-                catch
+                catch (Exception ex)
                 {
-                    // Just ignore assemblies that won't load.
+                    // Tell the world what happened.
+                    statusAction.Invoke(ex.Message);
                 }
             }
         }

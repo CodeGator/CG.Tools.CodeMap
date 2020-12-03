@@ -83,6 +83,7 @@
     <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="18.3.0.50" />
     <PackageReference Include="Syncfusion.Shared.WPF" Version="18.3.0.50" />
     <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="18.3.0.50" />
+    <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>

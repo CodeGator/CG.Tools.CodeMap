@@ -330,7 +330,9 @@
                                   ScrollSettings="{Binding ScrollSettings}"
                                   PageSettings="{Binding PageSettings}"
                                   SelectedItems="{Binding SelectedItems}"
+                                  ItemDeletingCommand="{Binding ItemDeletingCommand}"
                                   Tool="{Binding Tool}">
+                
             </syncfusion:SfDiagram>
         </Grid>        
 
