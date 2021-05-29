@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Tools.CodeMap", "CG.Tools.CodeMap.csproj", "{17BE3EAE-5F7A-4051-BA38-60304CB2D6E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CG.Tools.CodeMap.Tests", "..\tests\CG.Tools.CodeMap.Tests\CG.Tools.CodeMap.Tests.csproj", "{450336C1-CD2A-4B57-B8E3-BB7D788EA621}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{17BE3EAE-5F7A-4051-BA38-60304CB2D6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17BE3EAE-5F7A-4051-BA38-60304CB2D6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17BE3EAE-5F7A-4051-BA38-60304CB2D6E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{450336C1-CD2A-4B57-B8E3-BB7D788EA621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{450336C1-CD2A-4B57-B8E3-BB7D788EA621}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{450336C1-CD2A-4B57-B8E3-BB7D788EA621}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{450336C1-CD2A-4B57-B8E3-BB7D788EA621}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

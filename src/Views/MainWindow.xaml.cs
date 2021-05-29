@@ -17,7 +17,7 @@ namespace CG.Tools.CodeMap.Views
         #region Constructors
 
         /// <summary>
-        /// Thsi constructor creates a new instance of the <see cref="MainWindow"/>
+        /// This constructor creates a new instance of the <see cref="MainWindow"/>
         /// class.
         /// </summary>
         public MainWindow()

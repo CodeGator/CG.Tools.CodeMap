@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <UserSecretsId>a3095f1a-7b70-4d86-aa36-37e7d03883cb</UserSecretsId>
     <Authors>Martin Cook</Authors>
@@ -70,20 +70,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CG.Core" Version="2021.1.1" />
-    <PackageReference Include="CG.Runtime" Version="2021.1.1" />
+    <PackageReference Include="CG.Core" Version="2021.2.9" />
+    <PackageReference Include="CG.Runtime" Version="2021.2.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.3.37">
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.203">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="18.4.0.30" />
-    <PackageReference Include="Syncfusion.SfDiagram.WPF" Version="18.4.0.30" />
-    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="18.4.0.30" />
-    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="18.4.0.30" />
-    <PackageReference Include="Syncfusion.Shared.WPF" Version="18.4.0.30" />
-    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="18.4.0.30" />
+    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="19.1.0.65" />
+    <PackageReference Include="Syncfusion.SfDiagram.WPF" Version="19.1.0.65" />
+    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="19.1.0.65" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="19.1.0.65" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="19.1.0.65" />
+    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="19.1.0.65" />
   </ItemGroup>
 
   <ItemGroup>
