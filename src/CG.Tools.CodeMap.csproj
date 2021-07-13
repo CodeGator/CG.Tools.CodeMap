@@ -70,20 +70,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CG.Core" Version="2021.2.9" />
-    <PackageReference Include="CG.Runtime" Version="2021.2.5" />
+    <PackageReference Include="CG.Core" Version="2021.3.1" />
+    <PackageReference Include="CG.Runtime" Version="2021.3.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.203">
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.220">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="19.1.0.65" />
-    <PackageReference Include="Syncfusion.SfDiagram.WPF" Version="19.1.0.65" />
-    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="19.1.0.65" />
-    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="19.1.0.65" />
-    <PackageReference Include="Syncfusion.Shared.WPF" Version="19.1.0.65" />
-    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="19.1.0.65" />
+    <PackageReference Include="Syncfusion.SfBusyIndicator.WPF" Version="19.2.0.47" />
+    <PackageReference Include="Syncfusion.SfDiagram.WPF" Version="19.2.0.47" />
+    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="19.2.0.47" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="19.2.0.47" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="19.2.0.47" />
+    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="19.2.0.47" />
   </ItemGroup>
 
   <ItemGroup>
